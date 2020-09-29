@@ -17,3 +17,122 @@ body{
     width: 70%;
 
 }
+
+
+.bigCat{
+    
+  }
+  .bigCat .head{
+    width:270px;
+    height:230px;
+    background:#242424;
+    border-radius:55% 55% 50% 50%;
+    position: relative;
+    top:60px;
+    box-shadow: 0px 4px 8px -6px #111;
+    z-index: 2;
+  }
+ .hair{
+     position: relative;
+ }
+  .hair::after{
+    content: "";
+    width: 70px;
+    height: 70px;
+    background:#242424;
+    position: absolute;
+     transform: rotateZ(32deg) ;
+     top: -170px;
+     left: 100px;
+  }
+  .hair::before{
+    position:absolute;
+    content:"";
+    width: 70px;
+    height: 70px;
+    background:#242424;
+    left:130px;
+    transform: rotateZ(56deg);
+    top: -166px;
+  }
+  .ears .leftEar,.rightEar{
+    position:absolute; 
+    width:110px;
+    height:130px;
+    background:#242424;
+    top:25px;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  }
+  
+  .ears .leftEar{
+    transform: rotateZ(-45deg);
+  }
+  .ears .rightEar{
+    transform: rotateZ(20deg);
+    margin-left: 195px;
+    top: 33px;
+    
+  }
+  .ears .innerLeftEar,.innerRightEar{
+    position:absolute; 
+    width:76px;
+    height: 86px;
+    background: palevioletred;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    z-index: 1;
+}
+.ears .innerLeftEar{
+    transform: rotateZ(-45deg);
+    top: 35px;
+    left: 233px;
+}
+.ears .innerRightEar{
+    transform: rotateZ(20deg);
+    top: 52px;
+    margin-left: 215px;
+}
+.eye .lefteye,.righteye{
+    width: 100px;
+    height: 130px;
+    border-radius: 60% 60% 60% 60%;
+    position: absolute;
+    z-index: 3;
+    margin-top: 32px;
+    background: #E6E6E6;
+}
+.eye .lefteye{
+top: 58px;
+left: 253px;
+}
+.eye .righteye{
+    top: 58px;
+    margin-left: 142px;
+}
+.eye .innerLefteye,.innerRighteye{
+    width: 65px;
+    height: 90px;
+    border-radius: 60% 60% 60% 60%;
+    position: absolute;
+    z-index: 4;
+    margin-top: 32px;
+    background: #242424;
+}
+.eye .innerLefteye{
+  top: 70px;
+  left: 268px;
+}
+.eye .innerRighteye{
+  top: 70px;
+  margin-left: 158px;
+}
+  .body{
+    width: 350px;
+    height: 250px;
+    position:absolute;
+    
+    border-radius: 50% / 80% 80% 50% 50%;
+    background:#242424;
+  left: 180px;
+    top: 236px;
+  }
+  
