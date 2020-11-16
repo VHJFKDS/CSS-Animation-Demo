@@ -1,163 +1,69 @@
-*{margin: 0;padding: 0;box-sizing: border-box;}
-*::after{box-sizing: border-box;}
-*::before{box-sizing: border-box;}
 
-body{
+  *{transition: all 0.5s;}
+  .catContainer {
+      position: absolute;
+      top: 98px;
+      right: 34%;
+  }
+  body{
     height: 100vh;
-    display: flex;
-    flex-direction: row;
-    background: #fcf2c1;
-}
-
+    overflow: hidden;
+  }
 .code-wrapper{
-    width: 30%;
-    color: white;
+  padding: 10px;
+  width: 40%;
+      height: 90%;
+    margin: 20px;
+
 }
-.preview-wrapper{
-    flex: 1;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+#code{width: 100%;overflow: hidden;}
+  
 
 
-
-  .bigCat .head{
-    width:170px;
-    height:130px;
-    background:#242424;
-    border-radius:55% 55% 50% 50%;
+  .actions{
     position: absolute;
-    right: 300px;
-    bottom: 225px;
-    box-shadow: 0px 4px 8px -6px #111;
-    z-index: 2;
-  }
- .hair{
-     position: relative;
- }
-  .hair::after{
-    content: "";
-    width: 70px;
-    height: 70px;
-    background:#242424;
-    position: absolute;
-     transform: rotateZ(32deg) ;
-     top: -170px;
-     left: 100px;
-  }
-  .hair::before{
-    position:absolute;
-    content:"";
-    width: 70px;
-    height: 70px;
-    background:#242424;
-    left:130px;
-    transform: rotateZ(56deg);
-    top: -166px;
-  }
-  .ears{
-    position: absolute;
+    right: 40px;
     top: 0;
+    display: flex;
+    flex-direction: column;
   }
-  .ears .leftEar,.rightEar{
-    position:absolute; 
-    width:80px;
-    height:100px;
-    background:#242424;
-    /* top:25px; */
-    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  .actions>button{
+    margin-top: 15px;
+    background: #ddd;
+    padding: 8px 10px;
+    border: none;
   }
-  
-  .ears .leftEar{
-    top: 190px;
-    right: 70px;
-    transform: rotateZ(-45deg);
+  .actions>button.active{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: #bbb;
   }
-  .ears .rightEar{
-    transform: rotateZ(20deg);
-    top: 202px;
-    right: -25px;
-    
+  .actions>button:focus{
+    outline: none;
   }
-  .ears .innerLeftEar,.innerRightEar{
-    position:absolute; 
-    width:60px;
-    height: 100px;
-    background: palevioletred;
-    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
-    z-index: 1;
-}
-.ears .innerLeftEar{
-    transform: rotateZ(-45deg);
-    top: 196px;
-    right: 73px;
-}
-.ears .innerRightEar{
-    transform: rotateZ(20deg);
-    top: 209px;
-    right: -11px;
-}
-.eye .lefteye,.righteye{
-    width: 62px;
-    height: 50px;
-    border-radius: 60% 60% 60% 60%;
-    position: absolute;
-    z-index: 3;
-    margin-top: 32px;
-    background: #E6E6E6;
-}
-.eye .lefteye{
-top: 58px;
-margin-left: 37px;
-}
-.eye .righteye{
-    top: 58px;
-    margin-left: 142px;
-}
-.eye .lefteyePupil,.righteyePupil{
-    width: 20px;
-    height: 35px;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 4;
-    margin-top: 32px;
-    background: #222;
-}
-.eye .lefteyePupil{
-  top: 75px;
-  margin-left: 58px;
-}
-.eye .righteyePupil{
-  top: 75px;
-  margin-left: 165px;
-}
-.eyelid{
-    height: 60%;
-	width: 100%;
-    position: absolute;
-    border-radius: 100% 100% 10% 10%;
-	animation: blink 6s infinite ease-in-out;
-    animation-delay: 7s;
-    z-index: 5;
-}
-@keyframes blink{
-  1% {height: 60%;}
-	2% {height: 80%;}
-	3% {height: 100%;}
-	4% {height: 80%;}
-	5% {height: 60%;}
-	100% {height: 60%;}
-}
-.body{
-  width: 185px;
-  height: 110px;
-  position:absolute;
-  
-  border-radius: 50% / 80% 80% 50% 50%;
-  background:#242424;
-  margin-left: -40px;
-  top: 308px;
-  right: 292px;
-}
+
+
+
+  @media(max-width:550px){
+      body{width: 100vh;height: 100vh; }
+
+    .code-wrapper{
+        width: 100%;height: 50%;margin: 0;z-index: 10;
+    }
+    .preview{
+        height: 50%;
+    }
+    .catContainer{
+        top: 35%;left: 20%;
+    }
+    html{overflow: hidden;}
+    .code{z-index: 11;}
+  }
+  @media (max-width:322px){
+    .catContainer{
+        top: 25%;left: 20%;
+    }
+    .code-wrapper{
+      height: 45%;margin: 0;z-index:10;
+    }
+    .code{z-index: 11;}
+  }
